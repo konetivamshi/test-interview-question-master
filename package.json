@@ -1,0 +1,11 @@
+{
+  "name": "topology_problem",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.0.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}

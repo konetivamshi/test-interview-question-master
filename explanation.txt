@@ -1,0 +1,15 @@
+1.	In automate.py file, created a class and created 3 methods.
+2.	In 3 methods, first method is to build docker image for our rails application and used docker build command.
+3.	Now need expose the application on multiple ports. 3000 to 3006 are the host ports and 3000 is the container port to expose the rails in multiple ports.
+4.	Used subprocess module to pass the docker commands. We can use subprocess.run method to pass the command. If we wanna check the output, we can use subprocess.check_output method.
+5.	Once the docker ports are exposed, I can check from web browser, http://localhost:3000/ (likewise 3000-3006) will give "Hello World".
+6.	For each port, I passed port as a parameter to get_Data method and used requests module ro call requests.get method. This requests.get method fetches the data from localhost and port.
+7.	Then created master-server container and 5 other clients containers.
+8.	In order to make containers communication Used Docker Link. By using Docker link, we can restrict the Docker containers communication with others.
+9.	If we use Docker network, then all Docker containers created within same network will make communication to each other. It may be possible, to restrict the communication. So used Docker link flag.
+10.	Now created 5 clients and used –link flag to link to master-server container.
+11.	So each client can make communication only to master-server.
+12.	Used pexpect.spawn to login to each container and used sendline module to pass the commands to container.
+13.	Once I got the output, it will be binary format. So, I decoded with utf-8 and stored it in variable.
+14.	Now to check the communication, I used ping master-server from each client created. I pinged to master-server for 5 times and got the output.
+15.	If in output, ‘Name or service not known’ is present then I fail the script and print ping is not working between client and server. Else, ping is successful and returned the entire output.

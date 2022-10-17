@@ -1,0 +1,358 @@
+vkoneti@VKONETI-M-M193 test-interview-question-master % python3 automate.py
+Creating Docker Image automation
+[+] Building 106.2s (17/17) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                                                   0.0s
+ => => transferring dockerfile: 37B                                                                                                                                                                    0.0s
+ => [internal] load .dockerignore                                                                                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                                                                                        0.0s
+ => resolve image config for docker.io/docker/dockerfile:1                                                                                                                                             0.7s
+ => CACHED docker-image://docker.io/docker/dockerfile:1@sha256:9ba7531bd80fb0a858632727cf7a112fbfd19b17e94c4e84ced81e24ef1a0dbc                                                                        0.0s
+ => [internal] load .dockerignore                                                                                                                                                                      0.0s
+ => [internal] load build definition from Dockerfile                                                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/ruby:2.7.2                                                                                                                                          0.6s
+ => [1/8] FROM docker.io/library/ruby:2.7.2@sha256:1dd0106849233fcd913b7c4608078fa1a53a5e3ce1af2a55e4d726b0d8868e2f                                                                                    0.0s
+ => [internal] load build context                                                                                                                                                                      0.0s
+ => => transferring context: 28.38kB                                                                                                                                                                   0.0s
+ => CACHED [2/8] RUN apt-get update -qq && apt-get install -y nodejs postgresql-client                                                                                                                 0.0s
+ => CACHED [3/8] WORKDIR /test-interview-question-master                                                                                                                                               0.0s
+ => CACHED [4/8] COPY Gemfile /test-interview-question-master/Gemfile                                                                                                                                  0.0s
+ => CACHED [5/8] COPY Gemfile.lock /test-interview-question-master/Gemfile.lock                                                                                                                        0.0s
+ => [6/8] COPY . /test-interview-question-master                                                                                                                                                       0.1s
+ => [7/8] RUN gem install bundler:1.16.1                                                                                                                                                               1.5s
+ => [8/8] RUN bundle install                                                                                                                                                                         101.9s
+ => exporting to image                                                                                                                                                                                 1.2s
+ => => exporting layers                                                                                                                                                                                1.1s
+ => => writing image sha256:93c0a27a096a701da8728fa954d05bf8b1e9103c508631e277f4fde17c2b5205                                                                                                           0.0s
+ => => naming to docker.io/library/automation                                                                                                                                                          0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+
+
+Checking if Docker Image Exits
+automation Docker Image exists
+
+
+docker run -d -p 3000:3000 automation
+
+f64dcfbd1efcdee40701817084555032aa813dd3e82bc127d538fd77a930a9ad
+trying to get data
+Getting data from http://localhost:3000/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TopologyProblem</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="59VccDb3g+acjnnzdyqpGTGplroSWMpKxQZCNbQfHQKbrEvFby1NguxwTItzyJZI+wHNKp6DazSpyGpxnGcwvA==" />
+
+    <link rel="stylesheet" media="all" href="/assets/topology.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/rails-ujs.self-661556f443fbae7f6cec8f2cd394aa5e8186cb3f96aded9628126d3484eaa71a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-be3674a79bb9d13d41d259b2c17fad23aef20946dab3603b9d02374ea795005f.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-66347cf0a4cb1f26f76868b4697a9eee457c8c3a6da80c6fdd76ff77e911715e.js?body=1" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    Hello World
+
+  </body>
+</html>
+
+
+
+docker run -d -p 3001:3000 automation
+
+76bdefea1ca39986561f4691c6608525996da87c2995342e1e805ff141c61a8e
+trying to get data
+Getting data from http://localhost:3001/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TopologyProblem</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ICfIb2SSSwOK4K/3Xg4ycwaDqui26nyIRrZkBnpRbYd4X1wvMeWfgJ51+6Io/0+prn54J8ttPEveR4koeW/wOw==" />
+
+    <link rel="stylesheet" media="all" href="/assets/topology.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/rails-ujs.self-661556f443fbae7f6cec8f2cd394aa5e8186cb3f96aded9628126d3484eaa71a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-be3674a79bb9d13d41d259b2c17fad23aef20946dab3603b9d02374ea795005f.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-66347cf0a4cb1f26f76868b4697a9eee457c8c3a6da80c6fdd76ff77e911715e.js?body=1" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    Hello World
+
+  </body>
+</html>
+
+
+
+docker run -d -p 3002:3000 automation
+
+2aec49a2a47466c6b91db5d45885bfa9d814f0679872b23e87b7770af512237e
+trying to get data
+Getting data from http://localhost:3002/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TopologyProblem</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="U92EK6c0kmPBIN9JSpTsb2fG8IjsXfTqLLwXGNkSZIevC1Bn5FDHj5V6QtWFeWiw8ua7AAI3Xp4flEqps74v+Q==" />
+
+    <link rel="stylesheet" media="all" href="/assets/topology.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/rails-ujs.self-661556f443fbae7f6cec8f2cd394aa5e8186cb3f96aded9628126d3484eaa71a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-be3674a79bb9d13d41d259b2c17fad23aef20946dab3603b9d02374ea795005f.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-66347cf0a4cb1f26f76868b4697a9eee457c8c3a6da80c6fdd76ff77e911715e.js?body=1" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    Hello World
+
+  </body>
+</html>
+
+
+
+docker run -d -p 3003:3000 automation
+
+c0a79689d5e0540d554e8691458458ba9ee7544755e19aa2df89e234a1ce79ca
+trying to get data
+Getting data from http://localhost:3003/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TopologyProblem</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ElNjlXzssgbqIUnsO6+/auh2p7SPxyQI9a62tGBNsnQCRISKvZNFp6sx7MgcuTw0sR2U8cmjMoAGEpGCtWiD8w==" />
+
+    <link rel="stylesheet" media="all" href="/assets/topology.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/rails-ujs.self-661556f443fbae7f6cec8f2cd394aa5e8186cb3f96aded9628126d3484eaa71a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-be3674a79bb9d13d41d259b2c17fad23aef20946dab3603b9d02374ea795005f.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-66347cf0a4cb1f26f76868b4697a9eee457c8c3a6da80c6fdd76ff77e911715e.js?body=1" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    Hello World
+
+  </body>
+</html>
+
+
+
+docker run -d -p 3004:3000 automation
+
+c9babe7126652851953c85ffd69d2043c1c615ea0d87bab16da2ef16fad3aa7d
+trying to get data
+Getting data from http://localhost:3004/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TopologyProblem</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="/Ibvdz3U5hhT6aoISdKKYhqagBdZJupzousVS3Pwr917TKVhjtuOojXYhu6rSUEsx8ntuFpkflF/Fk3Ys70ebw==" />
+
+    <link rel="stylesheet" media="all" href="/assets/topology.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/rails-ujs.self-661556f443fbae7f6cec8f2cd394aa5e8186cb3f96aded9628126d3484eaa71a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-be3674a79bb9d13d41d259b2c17fad23aef20946dab3603b9d02374ea795005f.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-66347cf0a4cb1f26f76868b4697a9eee457c8c3a6da80c6fdd76ff77e911715e.js?body=1" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    Hello World
+
+  </body>
+</html>
+
+
+
+docker run -d -p 3005:3000 automation
+
+d410a2535a49d2be0a256f6f1aa4e3562df41458a85a6fffe9598e0c5390c2d8
+trying to get data
+Getting data from http://localhost:3005/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TopologyProblem</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="pfrE2hdemStUAHJnrSBtYbq1jLNLclGuvgU+HJ7QRftivL4dMOFeoOaUNVg9xbZAqWhEk8b6r+HufwzUk6xSPQ==" />
+
+    <link rel="stylesheet" media="all" href="/assets/topology.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/rails-ujs.self-661556f443fbae7f6cec8f2cd394aa5e8186cb3f96aded9628126d3484eaa71a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-be3674a79bb9d13d41d259b2c17fad23aef20946dab3603b9d02374ea795005f.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-66347cf0a4cb1f26f76868b4697a9eee457c8c3a6da80c6fdd76ff77e911715e.js?body=1" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    Hello World
+
+  </body>
+</html>
+
+
+
+docker run -d -p 3006:3000 automation
+
+0abfb76eb2d0bed5f782a0a85c12a40f97d8ed2f79145335a437f7918358c78e
+trying to get data
+Getting data from http://localhost:3006/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TopologyProblem</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="s59d7Io4APSj9OmSjnahwWEnhFlQkqO3Kpn1/DVFbcRAVDE+TBAguFrPbjcRVbHnYkpZ+UvHLuEHtR/XRlySQQ==" />
+
+    <link rel="stylesheet" media="all" href="/assets/topology.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="reload" />
+<link rel="stylesheet" media="all" href="/assets/application.self-f0d704deea029cf000697e2c0181ec173a1b474645466ed843eb5ee7bb215794.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/rails-ujs.self-661556f443fbae7f6cec8f2cd394aa5e8186cb3f96aded9628126d3484eaa71a.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/action_cable.self-be3674a79bb9d13d41d259b2c17fad23aef20946dab3603b9d02374ea795005f.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-66347cf0a4cb1f26f76868b4697a9eee457c8c3a6da80c6fdd76ff77e911715e.js?body=1" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    Hello World
+
+  </body>
+</html>
+
+
+
+
+docker run -dit --name master-server automation
+
+master-server is created and container-id is: 14d667c51e500979e83df7171c86dbfb127089ab6ef65b4291aa5722bd1dcd18
+
+Creating client-1
+
+client-1 is created and container-id is: 4112e766a42afd9fca22a882b95178fa132aa6b0f3cf77f816235f02547989b3
+
+Ping is successful from client-1 to master-server
+ping master-server -c 5
+PING master-server (172.17.0.9) 56(84) bytes of data.
+64 bytes from master-server (172.17.0.9): icmp_seq=1 ttl=64 time=0.862 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=2 ttl=64 time=0.056 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=3 ttl=64 time=0.088 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=4 ttl=64 time=0.087 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=5 ttl=64 time=0.067 ms
+
+--- master-server ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 75ms
+rtt min/avg/max/mdev = 0.056/0.232/0.862/0.315 ms
+root@4112e766a42a:/test-interview-question-master
+
+Creating client-2
+
+client-2 is created and container-id is: 8c46c12f649480da5b6cb0e7cbb954ecb348c1704f838ea39d0101ce51a49467
+
+Ping is successful from client-2 to master-server
+ping master-server -c 5
+PING master-server (172.17.0.9) 56(84) bytes of data.
+64 bytes from master-server (172.17.0.9): icmp_seq=1 ttl=64 time=0.883 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=2 ttl=64 time=0.059 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=3 ttl=64 time=0.150 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=4 ttl=64 time=0.170 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=5 ttl=64 time=0.136 ms
+
+--- master-server ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 76ms
+rtt min/avg/max/mdev = 0.059/0.279/0.883/0.304 ms
+root@8c46c12f6494:/test-interview-question-master
+
+Creating client-3
+
+client-3 is created and container-id is: 6eef2f920cdac866b55f7c7a41053a8f4bff34daf0038d5d914e593cfeabf15b
+
+Ping is successful from client-3 to master-server
+ping master-server -c 5
+PING master-server (172.17.0.9) 56(84) bytes of data.
+64 bytes from master-server (172.17.0.9): icmp_seq=1 ttl=64 time=0.258 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=2 ttl=64 time=0.089 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=3 ttl=64 time=0.135 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=4 ttl=64 time=0.126 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=5 ttl=64 time=0.297 ms
+
+--- master-server ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 142ms
+rtt min/avg/max/mdev = 0.089/0.181/0.297/0.081 ms
+root@6eef2f920cda:/test-interview-question-master
+
+Creating client-4
+
+client-4 is created and container-id is: cbd50cecd44ba02c81d7bb69cdf3cd9b1348e316182349c33f2f674ef1abc7c5
+
+Ping is successful from client-4 to master-server
+ping master-server -c 5
+PING master-server (172.17.0.9) 56(84) bytes of data.
+64 bytes from master-server (172.17.0.9): icmp_seq=1 ttl=64 time=1.08 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=2 ttl=64 time=0.067 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=3 ttl=64 time=0.131 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=4 ttl=64 time=0.123 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=5 ttl=64 time=0.104 ms
+
+--- master-server ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 76ms
+rtt min/avg/max/mdev = 0.067/0.301/1.082/0.391 ms
+root@cbd50cecd44b:/test-interview-question-master
+
+Creating client-5
+
+client-5 is created and container-id is: c6b64442025c49501f972b246ff4c64f0010cbb3e7bc3c78c2143e5955180bec
+
+Ping is successful from client-5 to master-server
+ping master-server -c 5
+PING master-server (172.17.0.9) 56(84) bytes of data.
+64 bytes from master-server (172.17.0.9): icmp_seq=1 ttl=64 time=1.09 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=2 ttl=64 time=0.065 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=3 ttl=64 time=0.168 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=4 ttl=64 time=0.098 ms
+64 bytes from master-server (172.17.0.9): icmp_seq=5 ttl=64 time=0.131 ms
+
+--- master-server ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 98ms
+rtt min/avg/max/mdev = 0.065/0.309/1.087/0.390 ms
+root@c6b64442025c:/test-interview-question-master
+
+Ping to master-server is reachable on all clients
+vkoneti@VKONETI-M-M193 test-interview-question-master %
+
+vkoneti@VKONETI-M-M193 test-interview-question-master % docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED         STATUS         PORTS                    NAMES
+c6b64442025c   automation   "bin/rails server -b…"   6 minutes ago   Up 6 minutes   3000/tcp                 client-5
+cbd50cecd44b   automation   "bin/rails server -b…"   6 minutes ago   Up 6 minutes   3000/tcp                 client-4
+6eef2f920cda   automation   "bin/rails server -b…"   7 minutes ago   Up 7 minutes   3000/tcp                 client-3
+8c46c12f6494   automation   "bin/rails server -b…"   7 minutes ago   Up 7 minutes   3000/tcp                 client-2
+4112e766a42a   automation   "bin/rails server -b…"   7 minutes ago   Up 7 minutes   3000/tcp                 client-1
+14d667c51e50   automation   "bin/rails server -b…"   7 minutes ago   Up 7 minutes   3000/tcp                 master-server
+0abfb76eb2d0   automation   "bin/rails server -b…"   7 minutes ago   Up 7 minutes   0.0.0.0:3006->3000/tcp   distracted_rubin
+d410a2535a49   automation   "bin/rails server -b…"   7 minutes ago   Up 7 minutes   0.0.0.0:3005->3000/tcp   musing_newton
+c9babe712665   automation   "bin/rails server -b…"   7 minutes ago   Up 7 minutes   0.0.0.0:3004->3000/tcp   determined_hodgkin
+c0a79689d5e0   automation   "bin/rails server -b…"   7 minutes ago   Up 7 minutes   0.0.0.0:3003->3000/tcp   beautiful_booth
+2aec49a2a474   automation   "bin/rails server -b…"   7 minutes ago   Up 7 minutes   0.0.0.0:3002->3000/tcp   adoring_pasteur
+76bdefea1ca3   automation   "bin/rails server -b…"   8 minutes ago   Up 8 minutes   0.0.0.0:3001->3000/tcp   nervous_taussig
+f64dcfbd1efc   automation   "bin/rails server -b…"   8 minutes ago   Up 8 minutes   0.0.0.0:3000->3000/tcp   pensive_sinoussi
+vkoneti@VKONETI-M-M193 test-interview-question-master %
